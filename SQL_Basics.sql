@@ -1,12 +1,7 @@
 --1--
-SELECT COUNT(*) FROM stops
+SELECT population FROM world  WHERE name = 'Germany'
 --2--
-SELECT id FROM stops WHERE name ='Craiglockhart'
+SELECT name, population FROM world  WHERE name IN ('Sweden', 'Norway' , 'Denmark');
 --3--
-SELECT id, name FROM stops JOIN  route ON id=stop WHERE company='LRT'AND num='4'
---4--
-SELECT company, num, COUNT(*)
-FROM route WHERE stop=149 OR stop=53
-GROUP BY company, num
-HAVING COUNT(*)>1
---5--
+SELECT name, area FROM world  WHERE area BETWEEN 200000 AND 250000
+
